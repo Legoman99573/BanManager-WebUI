@@ -96,7 +96,7 @@ foreach($variables as $var) {
 		$contents = str_replace("<?php".PHP_EOL, "<?php".PHP_EOL."$"."settings".$$var, $contents);
 }
 
-file_put_contents('../settings.php', $contents);
+file_put_contents('../settings.php', $contents); //Do not edit unless you change the file name resulting in error
 
 $array['success'] = 'true';
 
