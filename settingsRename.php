@@ -16,6 +16,10 @@
 * and more.
 **/
 
+/**
+ * When done, name "settingsRename.php" to "settings.php" to make sure there are no errors in the webpage
+ **/
+
 date_default_timezone_set("Europe/Berlin"); // Set default timezone for date()
 
 $settings['debug']['sqlcache'] = false; // show and var_dump any cached SQL queries
@@ -26,7 +30,7 @@ $settings['utf8'] = true; // Encoding (Recommended TRUE)
 $settings['latest_bans'] = true;  // Latest Bans table
 $settings['latest_mutes'] = true; // Latest Mutes table
 $settings['latest_warnings'] = true; // Latest warnings table
-$settings['servers'] = '';
+$settings['servers'] = ''; // This is done in the ACP (Do not fill in or delete unless you know what you are doing)
 $settings['iframe_protection'] = true; // If true, you won't be able to <iframe> this web interface
 $settings['password'] = 'password'; // ACP Password (Keep it strong)
 $settings['footer'] = '&copy; Your Server '.date('Y'); // Footer for all pages
@@ -57,7 +61,7 @@ $settings['cache_home'] = 60;
 
 // Skin service options
 // ("%name%" is the placeholder for the player %name)
-// ("%uuid%" is the placeholder for the player uuid)
+// ("%uuid%" is the placeholder for the player %uuid)
 $settings['skin']['helm'] = "https://crafatar.com/avatars/%uuid%?helm&size=24";
 $settings['skin']['complete'] = "https://crafatar.com/renders/body/%uuid%?helm&scale=7";
 
@@ -76,6 +80,7 @@ $language['nav-home'] = 'Home'; // The text displayed in the navbar for 'Home'
 $language['nav-stats'] = 'Statistics'; // The text displayed in the navbar for 'Servers'
 $language['past_player_bans'] = 'Past Player Bans'; // The text displayed on the homepage
 $language['bm_info_text'] = // The text displayed if bm_info is set to true. Enter your text below, HTML elements supported
+
 '
   Ban Management is a ban and mute system that allows players to check if and why they were banned, muted or warned and by
   whom.
