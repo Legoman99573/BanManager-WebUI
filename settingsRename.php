@@ -18,13 +18,22 @@
 
 /**
  * When done, name "settingsRename.php" to "settings.php" to make sure there are no errors in the webpage
+ * To name it anything you want, go to ajax/updatesettings.php and locate line 99 to change it (it must match the name of this file)
  **/
 
 date_default_timezone_set("Europe/Berlin"); // Set default timezone for date()
 
+/**
+ * Debug Settings
+ **/
+
 $settings['debug']['sqlcache'] = false; // show and var_dump any cached SQL queries
 $settings['debug']['error_reporting'] = false; // display PHP errors
 $settings['debug']['error_reporting_level'] = E_ALL; // Set error level (E_ALL, E_ERROR, E_WARNING, E_NOTICE)
+
+/**
+ * Homepage Settings
+ **/
 
 $settings['utf8'] = true; // Encoding (Recommended TRUE)
 $settings['latest_bans'] = true;  // Latest Bans table
@@ -39,6 +48,10 @@ $settings['bm_info'] = true; // Show ban management infomation aside 'Account St
 $settings['bm_info_icon'] = true; // Show the 'info' icon next to the title of bm_info
 $settings['pastbans'] = true; // Show amount of players banned under the search
 
+/**
+ * View Player Settings
+ **/
+
 $settings['player_current_ban'] = true;
 $settings['player_current_mute'] = true;
 $settings['player_previous_bans'] = true;
@@ -47,6 +60,10 @@ $settings['player_kicks'] = true;
 $settings['player_warnings'] = true;
 $settings['player_current_ban_extra_html'] = '';
 $settings['player_current_mute_extra_html'] = '';
+
+/**
+ * Widgets Settings
+ **/
 
 $settings['widget_bans_count'] = 5;
 $settings['widget_mutes_count'] = 5;
